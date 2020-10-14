@@ -1,0 +1,48 @@
+// Written by Lucas van Dongen - https://github.com/lavandongen
+
+.animate-svg {
+
+	&[data-animate-opacity="true"] {
+
+		.animate-svg-child {
+			opacity: 0;
+		}
+	}
+
+	&[data-animate-offset-y="true"] {
+
+		.animate-svg-child {
+			transform: translateY(-20px);
+		}
+	}
+
+	&[data-animate-offset-x="true"] {
+
+		.animate-svg-child {
+			transform: translateX(-20px);
+		}
+	}
+
+	&[data-animate-speed="fast"] {
+
+		.animate-svg-child {
+			transition: all .15s;
+		}
+	}
+
+	&[data-animate-speed="medium"] {
+
+		.animate-svg-child {
+			transition: all .25s;
+		}
+	}
+
+	.animate-svg-child {
+		transition: all .35s;
+
+		&--fired {
+			opacity: 1 !important;
+			transform: none !important;
+		}
+	}
+}
